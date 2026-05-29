@@ -4,8 +4,9 @@ import lixeiraIcon from '../assets/icons/lixeira.png'
 import calculadoraIcon from '../assets/icons/calculadora.png'
 import txtIcon from '../assets/icons/txt.png'
 import portfolioIcon from '../assets/icons/portfolio.png'
+import videoIcon from '../assets/icons/video.png'
 
-const imagesToPreload = [wallpaper, lixeiraIcon, calculadoraIcon, txtIcon, portfolioIcon]
+const imagesToPreload = [wallpaper, lixeiraIcon, calculadoraIcon, txtIcon, portfolioIcon, videoIcon]
 
 function preloadImage(src: string): Promise<void> {
   return new Promise((resolve) => {
