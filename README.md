@@ -1,73 +1,71 @@
-# React + TypeScript + Vite
+# 🐧 Linux Desktop
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Um portfólio interativo que simula um ambiente de desktop Linux, construído com React e TypeScript.
 
-Currently, two official plugins are available:
+**[🔗 Demo ao vivo](https://danielalexssander.github.io/linux-desktop/)**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+![React](https://img.shields.io/badge/React-19-blue)
+![TypeScript](https://img.shields.io/badge/TypeScript-6-blue)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4)
+![Vite](https://img.shields.io/badge/Vite-8-646CFF)
 
-## React Compiler
+## ✨ Funcionalidades
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Sistema de janelas** — arrastar, redimensionar, minimizar, maximizar e fechar
+- **Ícones no desktop** — arrastáveis com seleção em grupo (rubber-band)
+- **Taskbar** — lista de janelas abertas com ações rápidas
+- **Menu de contexto** — reset de ícones, configurações e about
+- **Tema claro/escuro** — com persistência em localStorage
 
-## Expanding the ESLint configuration
+## 🖥️ Aplicações
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+| App | Descrição |
+|-----|-----------|
+| Portfolio | Navegador embutido com o portfólio principal |
+| Calculadora | Calculadora funcional |
+| README.txt | Arquivo de texto com informações |
+| Lixeira | Gerenciador de arquivos descartados |
+| Video | Player de vídeo |
+| Configurações | Ajustes de tema (acessível via menu de contexto) |
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🚀 Rodando localmente
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+git clone https://github.com/DanielAlexssander/linux-desktop.git
+cd linux-desktop
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🛠️ Scripts
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+| Comando | Descrição |
+|---------|-----------|
+| `npm run dev` | Servidor de desenvolvimento |
+| `npm run build` | Build de produção |
+| `npm run preview` | Preview do build |
+| `npm run lint` | Lint com ESLint |
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 📦 Tecnologias
+
+- [React](https://react.dev/) — UI
+- [TypeScript](https://www.typescriptlang.org/) — Tipagem
+- [Vite](https://vite.dev/) — Build tool
+- [Tailwind CSS](https://tailwindcss.com/) — Estilização
+- [react-rnd](https://github.com/bokuweb/react-rnd) — Janelas arrastáveis/redimensionáveis
+- [Lucide React](https://lucide.dev/) — Ícones
+
+## 📁 Estrutura
+
 ```
+src/
+├── apps/           # Aplicações do desktop
+├── assets/         # Imagens e ícones
+├── components/     # Desktop, Window, Taskbar, DesktopIcon
+├── context/        # ThemeContext
+└── types/          # Tipos TypeScript
+```
+
+## 🌐 Deploy
+
+Deploy automático via GitHub Actions para GitHub Pages a cada push na branch `main`.

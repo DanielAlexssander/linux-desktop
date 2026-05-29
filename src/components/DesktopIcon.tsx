@@ -54,6 +54,7 @@ export default function DesktopIcon({ app, position, onOpen, onMove, onMoveGroup
       onPointerDown={onPointerDown}
       onPointerMove={onPointerMove}
       onPointerUp={onPointerUp}
+      onDragStart={(e) => e.preventDefault()}
       className={`flex flex-col items-center gap-1 p-1 rounded hover:bg-white/10 w-20 cursor-pointer select-none touch-none ${isSelected ? 'bg-blue-500/30 ring-1 ring-blue-400' : ''}`}
     >
       <Icon size={40} className="text-white drop-shadow" />
